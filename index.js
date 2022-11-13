@@ -6,7 +6,7 @@ const swaggerUI = require("swagger-ui-express");
 const swaggerJSDoc = require("swagger-jsdoc");
 const path = require("path");
 const app = express();
-var PORT = process.env.PORT || 8088;
+var PORT = 8080;//var PORT = process.env.PORT || 8088;
 
 
 const swaggerSpec = {
@@ -18,7 +18,7 @@ const swaggerSpec = {
         },
         servers: [
             {
-                url: "http://localhost:8088"
+                url: "http://localhost:8080"
             }
         ]
     },
