@@ -17,7 +17,7 @@ describe("Get test concert", () => {
 describe("GET /concert/:sortId", () => {
     it("responce with json containing a single concert", (done) => {
         request(app)
-            .get("/api/concert/CONCERT-7f9b775c-6778-49cd-828a-c65f24c3851c")
+            .get("/api/concert/CONCERT-7f9b775c-6778-49cd-828a-c65f24c3851c") //one concert?
             .set("Accept", "application/json")
             .expect("Content-Type", /json/)
             .expect(200, done);
