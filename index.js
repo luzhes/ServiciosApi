@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const tour_route = require('./routes/tourRoute');
 const concert_route = require('./routes/concertRoute');
@@ -8,6 +9,9 @@ const path = require("path");
 const app = express();
 var PORT = process.env.PORT || 8088;
 
+app.use(cors({
+    origin: "*"
+}));
 
 const swaggerSpec = {
     definition: {
