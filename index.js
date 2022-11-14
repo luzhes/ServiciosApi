@@ -6,7 +6,7 @@ const swaggerUI = require("swagger-ui-express");
 const swaggerJSDoc = require("swagger-jsdoc");
 const path = require("path");
 const app = express();
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 8088;
 
 
 const swaggerSpec = {
@@ -18,7 +18,7 @@ const swaggerSpec = {
         },
         servers: [
             {
-                url: "http://localhost:8080"
+                url: "http://localhost:8088"
             }
         ]
     },
@@ -33,6 +33,9 @@ app.get("/", (req, res) => {
 app.use('/api', tour_route);
 app.use('/api', concert_route);
 app.use("/api-doc", swaggerUI.serve, swaggerUI.setup(swaggerJSDoc(swaggerSpec)))
+
 app.listen(PORT, () => {
     console.log(`Port listening on ${PORT}`)
 })
+
+module.exports = app;
