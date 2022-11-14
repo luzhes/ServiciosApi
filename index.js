@@ -10,7 +10,7 @@ const app = express();
 var PORT = process.env.PORT || 8088;
 
 app.use(cors({
-    origin: "https://tour-concert.herokuapp.com/"
+    origin: "https://tour-concert.herokuapp.com"
 }));
 
 const swaggerSpec = {
